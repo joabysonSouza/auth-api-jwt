@@ -1,37 +1,37 @@
-API de Autenticação com Express
-Este projeto é uma API de autenticação construída com Express.js. Inclui registro de usuários, login, autenticação baseada em token e limitação de taxa.
+# 🔐 Authentication API (JWT)
 
-Funcionalidades
-Registro de usuários com senhas criptografadas.
-Login de usuários com autenticação JWT.
-Endpoint para atualização de token.
-Middleware para limitação de taxa e verificação de token.
-Tecnologias Utilizadas
-Express.js
-MongoDB
-JWT (JSON Web Token)
-Argon2 para hashing de senhas
-Middleware de limitação de taxa
-Instalação
-Clone o repositório:
+API RESTful para autenticação de usuários utilizando JWT, com foco em segurança, organização e boas práticas.
 
-git clone https://github.com/joabysonSouza/authenticationJWT.git
-Navegue até o diretório do projeto:
-cd authenticationJWT
+## 🚀 Tecnologias
 
-Instale as dependências:
+- Node.js
+- Express
+- JWT (JSON Web Token)
+- Argon2
+- PostgreSQL / MongoDB
+
+## 🔧 Funcionalidades
+
+- Registro de usuários
+- Login com autenticação JWT
+- Rotas protegidas
+- Hash seguro de senhas
+- Middleware de autenticação
+
+## 🔒 Segurança
+
+- Senhas criptografadas com Argon2
+- Tokens JWT com expiração
+- Proteção de rotas privadas
+
+## 📌 Rotas principais
+
+POST /register  
+POST /login  
+GET /profile (rota protegida)
+
+## ▶️ Como rodar o projeto
+
+```bash
 npm install
-
-Variáveis de Ambiente
-Crie um arquivo .env na raiz do seu projeto e adicione as seguintes variáveis de ambiente:
-
-env
-SECRET=seu_jwt_secret
-REFRESH_TOKEN=seu_refresh_token_secret
-
-Uso
-Inicie o servidor:
-npm start ou npm run dev
-
-
-
+npm run dev
